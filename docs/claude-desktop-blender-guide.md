@@ -1,14 +1,14 @@
-# Guía de Modelado 3D: Antigravity + Claude Desktop (App) + Blender MCP
+# Guía de Modelado 3D & OpenBIM (Bonsai): Antigravity + Claude Desktop + Blender MCP
 
-Esta guía detalla el flujo de trabajo 100% verificado para usar la **App de Claude Desktop** (sin terminal) junto a **Blender MCP** y **Antigravity**.
+Esta guía detalla el flujo de trabajo 100% verificado para usar la **App de Claude Desktop** (sin terminal) junto a **Blender MCP**, **Bonsai (BlenderBIM)** y **Antigravity**.
 
 ---
 
 ## 🏗️ Los 3 Pilares del Flujo
 
-1. **El Cerebro Arquitecto (Antigravity):** Diseña el blueprint paramétrico con proporciones, bounding boxes y colecciones.
-2. **El Escultor 3D (Claude Opus 5.5 en Claude Desktop):** Utiliza su razonamiento espacial adaptativo y llamadas MCP para modelar la geometría en directo en tu Blender abierto.
-3. **El Inspector Humano (Tú):** Rotas la escena en el viewport de Blender en cada checkpoint antes de dar la orden de continuar.
+1. **El Cerebro Arquitecto (Antigravity):** Diseña el blueprint paramétrico OpenBIM (`IfcProject`, `IfcSite`, `IfcBuildingStorey`, muros, losas, bounding boxes y cotas).
+2. **El Escultor 3D y Modelador BIM (Claude Opus 5.5 en Claude Desktop):** Utiliza su razonamiento adaptativo profundo, llamadas a Blender MCP y el API de IfcOpenShell / Bonsai para generar las entidades IFC nativas en tiempo real.
+3. **El Inspector Humano (Tú):** Rotas la escena en el viewport de Blender y verificas la jerarquía en el panel de Bonsai en cada checkpoint.
 
 ---
 

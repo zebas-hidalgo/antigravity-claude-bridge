@@ -54,6 +54,12 @@ For each task in the current phase:
 - Apply scale and rotation (`bpy.ops.object.transform_apply`) before adding Bevel or Subdivision Surface modifiers.
 - Use `bpy.data` operations over `bpy.ops` where possible for speed and context safety.
 
+### OpenBIM / Architecture with Bonsai (BlenderBIM)
+- Access the active IFC model via Bonsai (`import bonsai.bim.tool as tool; model = tool.Ifc.get()`).
+- Use `ifcopenshell.api` to instantiate architectural elements (`ifcopenshell.api.run("root.create_entity", model, ifc_class="IfcWall")`).
+- Always assign created entities to their designated `IfcBuildingStorey` container (`ifcopenshell.api.run("spatial.assign_container", model, relating_structure=storey, products=[element])`).
+- Do not create unclassified generic Blender meshes for walls/slabs; preserve semantic IFC data.
+
 ---
 
 ## Error Protocol (Fast-Stop for Antigravity)
