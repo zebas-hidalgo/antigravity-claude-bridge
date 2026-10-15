@@ -51,12 +51,19 @@ antigravity-claude-bridge/
 ├── skills/
 │   ├── claude-planner/         # Antigravity skill (Generates blueprints)
 │   │   └── SKILL.md
-│   └── antigravity-executor/   # Claude Code skill (Executes blueprints)
-│       └── SKILL.md
+│   ├── antigravity-executor/   # Claude Code skill (Executes blueprints)
+│   │   └── SKILL.md
+│   └── bonsai-bim-orchestrator/# OpenBIM skill for Bonsai (BlenderBIM) & MCP
+│       ├── SKILL.md
+│       └── bonsai-api-cheatsheet.py
 ├── templates/
 │   ├── plan-template-code.md   # Standard plan for software features / refactors
 │   ├── plan-template-blender.md# 3D blueprint for Blender MCP
+│   ├── plan-template-bonsai.md # OpenBIM blueprint for Bonsai (BlenderBIM)
+│   ├── claude-project-instructions.md # Instructions for Claude Desktop Projects
 │   └── CLAUDE.md               # Base rules for Claude Code
+├── docs/
+│   └── claude-desktop-blender-guide.md # Comprehensive guide for Claude App + Bonsai
 ├── LICENSE                     # MIT License
 └── README.md
 ```

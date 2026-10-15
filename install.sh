@@ -23,19 +23,26 @@ CLAUDE_SKILLS_DIR="${HOME}/.claude/skills"
 CLAUDE_GLOBAL_MD="${HOME}/.claude/CLAUDE.md"
 
 # 2. Install claude-planner into Antigravity
-echo -e "\n${YELLOW}[1/3] Installing claude-planner into Antigravity...${NC}"
+echo -e "\n${YELLOW}[1/4] Installing claude-planner into Antigravity...${NC}"
 mkdir -p "${GEMINI_SKILLS_DIR}/claude-planner"
 cp "${SCRIPT_DIR}/skills/claude-planner/SKILL.md" "${GEMINI_SKILLS_DIR}/claude-planner/SKILL.md"
 echo -e "${GREEN}✓ claude-planner installed at: ${GEMINI_SKILLS_DIR}/claude-planner/SKILL.md${NC}"
 
 # 3. Install antigravity-executor into Claude Code
-echo -e "\n${YELLOW}[2/3] Installing antigravity-executor into Claude Code...${NC}"
+echo -e "\n${YELLOW}[2/4] Installing antigravity-executor into Claude Code...${NC}"
 mkdir -p "${CLAUDE_SKILLS_DIR}/antigravity-executor"
 cp "${SCRIPT_DIR}/skills/antigravity-executor/SKILL.md" "${CLAUDE_SKILLS_DIR}/antigravity-executor/SKILL.md"
 echo -e "${GREEN}✓ antigravity-executor installed at: ${CLAUDE_SKILLS_DIR}/antigravity-executor/SKILL.md${NC}"
 
-# 4. Configure global CLAUDE.md
-echo -e "\n${YELLOW}[3/3] Configuring global Claude Code rules...${NC}"
+# 4. Install bonsai-bim-orchestrator into both environments
+echo -e "\n${YELLOW}[3/4] Installing bonsai-bim-orchestrator (Bonsai OpenBIM)...${NC}"
+mkdir -p "${GEMINI_SKILLS_DIR}/bonsai-bim-orchestrator" "${CLAUDE_SKILLS_DIR}/bonsai-bim-orchestrator"
+cp -r "${SCRIPT_DIR}/skills/bonsai-bim-orchestrator/"* "${GEMINI_SKILLS_DIR}/bonsai-bim-orchestrator/"
+cp -r "${SCRIPT_DIR}/skills/bonsai-bim-orchestrator/"* "${CLAUDE_SKILLS_DIR}/bonsai-bim-orchestrator/"
+echo -e "${GREEN}✓ bonsai-bim-orchestrator installed in Antigravity and Claude${NC}"
+
+# 5. Configure global CLAUDE.md
+echo -e "\n${YELLOW}[4/4] Configuring global Claude Code rules...${NC}"
 mkdir -p "${HOME}/.claude"
 RULE_MARKER="antigravity-executor"
 
